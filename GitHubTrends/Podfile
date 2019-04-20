@@ -1,0 +1,8 @@
+platform :ios, '12.0'
+
+target 'GitHubTrends' do
+    use_frameworks!
+    pod 'Alamofire', '~> 5.0.0-beta.5'
+    pod 'SwiftyJSON', '~> 4.3'
+
+end

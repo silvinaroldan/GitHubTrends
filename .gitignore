@@ -1,0 +1,13 @@
+# Xcode
+.DS_Store
+*.xcuserstate
+*.xcuserdatad
+*.xcworkspace
+!default.xcworkspace
+GitHubTrends/GitHubTrends.xcworkspace
+GitHubTrends.xcodeproj/project.xcworkspace/
+GitHubTrends.xcodeproj/project.xcworkspace/xcuserdata
+
+# CocoaPods
+GitHubTrends/Pods/
+GitHubTrends/Podfile.lock
