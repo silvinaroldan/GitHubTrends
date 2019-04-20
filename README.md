@@ -35,6 +35,10 @@ Steps to get the project ready:
 
 2) Once cocoapods is installed in your machine, go to Project directory and Run "pod install".
 
+### Xcode Configurations
+
+I added "API_BASE_URL" and "DEBUG_ALERTS" as User defined configuration on Build seetings to manage  the defaults release and debug environments as is described [here](https://medium.freecodecamp.org/managing-different-environments-and-configurations-for-ios-projects-7970327dd9c9). Since this is a test project I didn't add another schemas.
+
 
 ### Note:
 From what I see, there is no GitHub API to get list of trending repositories. As is suggested [here](https://stackoverflow.com/questions/30525330/how-to-get-list-of-trending-github-repositories-by-github-api) I list the trendy repositories using the [Search Github API](https://developer.github.com/v3/search/) to get the most starred repositories.

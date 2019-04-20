@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		35719A9E226B9D68004AC681 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35719A9D226B9D68004AC681 /* Colors.xcassets */; };
+		35719AA9226BA2E9004AC681 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AA8226BA2E9004AC681 /* APIClient.swift */; };
+		35719AAB226BA312004AC681 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AAA226BA312004AC681 /* ErrorParser.swift */; };
+		35719AAD226BA36F004AC681 /* AlamofireNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AAC226BA36F004AC681 /* AlamofireNetworkService.swift */; };
+		35719AAF226BA38E004AC681 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AAE226BA38E004AC681 /* Constants.swift */; };
+		35719AB1226BA399004AC681 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AB0226BA399004AC681 /* Settings.swift */; };
+		35719AB3226BA3AB004AC681 /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AB2226BA3AB004AC681 /* URLBuilder.swift */; };
+		35719AB5226BA3BC004AC681 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AB4226BA3BC004AC681 /* Endpoint.swift */; };
+		35719AB7226BAE33004AC681 /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AB6226BAE33004AC681 /* AlertInfo.swift */; };
+		35719AB9226BAF1E004AC681 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AB8226BAF1E004AC681 /* JSONDecoder.swift */; };
+		35719ABB226BAF8A004AC681 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719ABA226BAF8A004AC681 /* DateFormatter.swift */; };
+		35719ABD226BBB64004AC681 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719ABC226BBB64004AC681 /* String.swift */; };
+		35719ABF226BBB99004AC681 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719ABE226BBB99004AC681 /* Codable.swift */; };
+		35719AC1226BBBDA004AC681 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC0226BBBDA004AC681 /* Error.swift */; };
+		35719AC3226BBC6D004AC681 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC2226BBC6D004AC681 /* Repository.swift */; };
 		35FDF6EA226B9A77008142BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDF6E9226B9A77008142BC /* AppDelegate.swift */; };
 		35FDF6F1226B9A78008142BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FDF6F0226B9A78008142BC /* Assets.xcassets */; };
 		35FDF6F4226B9A78008142BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FDF6F2226B9A78008142BC /* LaunchScreen.storyboard */; };
@@ -18,6 +32,20 @@
 		2A8B7917A2AEB405227E7096 /* Pods-GitHubTrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTrends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTrends/Pods-GitHubTrends.debug.xcconfig"; sourceTree = "<group>"; };
 		2EC17FC2D2A1936B96C4CB86 /* Pods_GitHubTrends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubTrends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35719A9D226B9D68004AC681 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		35719AA8226BA2E9004AC681 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		35719AAA226BA312004AC681 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
+		35719AAC226BA36F004AC681 /* AlamofireNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkService.swift; sourceTree = "<group>"; };
+		35719AAE226BA38E004AC681 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		35719AB0226BA399004AC681 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		35719AB2226BA3AB004AC681 /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		35719AB4226BA3BC004AC681 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		35719AB6226BAE33004AC681 /* AlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
+		35719AB8226BAF1E004AC681 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		35719ABA226BAF8A004AC681 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		35719ABC226BBB64004AC681 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		35719ABE226BBB99004AC681 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
+		35719AC0226BBBDA004AC681 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		35719AC2226BBC6D004AC681 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		35FDF6E6226B9A77008142BC /* GitHubTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FDF6E9226B9A77008142BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FDF6F0226B9A78008142BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +69,7 @@
 		35719A97226B9D2B004AC681 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				35719AC2226BBC6D004AC681 /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -48,6 +77,9 @@
 		35719A98226B9D2B004AC681 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				35719AA8226BA2E9004AC681 /* APIClient.swift */,
+				35719AA6226BA2D8004AC681 /* ErrorParsing */,
+				35719AA7226BA2D8004AC681 /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -56,6 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				35719A9F226B9D8B004AC681 /* Extensions */,
+				35719AAE226BA38E004AC681 /* Constants.swift */,
+				35719AB0226BA399004AC681 /* Settings.swift */,
+				35719AB6226BAE33004AC681 /* AlertInfo.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -87,6 +122,11 @@
 		35719A9F226B9D8B004AC681 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				35719AB8226BAF1E004AC681 /* JSONDecoder.swift */,
+				35719ABA226BAF8A004AC681 /* DateFormatter.swift */,
+				35719ABC226BBB64004AC681 /* String.swift */,
+				35719ABE226BBB99004AC681 /* Codable.swift */,
+				35719AC0226BBBDA004AC681 /* Error.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -128,6 +168,24 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		35719AA6226BA2D8004AC681 /* ErrorParsing */ = {
+			isa = PBXGroup;
+			children = (
+				35719AAA226BA312004AC681 /* ErrorParser.swift */,
+			);
+			path = ErrorParsing;
+			sourceTree = "<group>";
+		};
+		35719AA7226BA2D8004AC681 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				35719AAC226BA36F004AC681 /* AlamofireNetworkService.swift */,
+				35719AB2226BA3AB004AC681 /* URLBuilder.swift */,
+				35719AB4226BA3BC004AC681 /* Endpoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		35FDF6DD226B9A77008142BC = {
@@ -321,7 +379,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35719AB1226BA399004AC681 /* Settings.swift in Sources */,
+				35719AB3226BA3AB004AC681 /* URLBuilder.swift in Sources */,
+				35719AC3226BBC6D004AC681 /* Repository.swift in Sources */,
+				35719AB9226BAF1E004AC681 /* JSONDecoder.swift in Sources */,
+				35719AB5226BA3BC004AC681 /* Endpoint.swift in Sources */,
+				35719AAF226BA38E004AC681 /* Constants.swift in Sources */,
+				35719ABB226BAF8A004AC681 /* DateFormatter.swift in Sources */,
+				35719ABD226BBB64004AC681 /* String.swift in Sources */,
 				35FDF6EA226B9A77008142BC /* AppDelegate.swift in Sources */,
+				35719AAB226BA312004AC681 /* ErrorParser.swift in Sources */,
+				35719ABF226BBB99004AC681 /* Codable.swift in Sources */,
+				35719AA9226BA2E9004AC681 /* APIClient.swift in Sources */,
+				35719AAD226BA36F004AC681 /* AlamofireNetworkService.swift in Sources */,
+				35719AC1226BBBDA004AC681 /* Error.swift in Sources */,
+				35719AB7226BAE33004AC681 /* AlertInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,8 +531,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A8B7917A2AEB405227E7096 /* Pods-GitHubTrends.debug.xcconfig */;
 			buildSettings = {
+				API_BASE_URL = "https://api.github.com";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_ALERTS = YES;
 				DEVELOPMENT_TEAM = F72NGYWYWY;
 				INFOPLIST_FILE = GitHubTrends/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,8 +552,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC5AF7BB219D15B6CC2793DE /* Pods-GitHubTrends.release.xcconfig */;
 			buildSettings = {
+				API_BASE_URL = "https://api.github.com";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_ALERTS = NO;
 				DEVELOPMENT_TEAM = F72NGYWYWY;
 				INFOPLIST_FILE = GitHubTrends/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
