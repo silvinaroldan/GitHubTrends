@@ -1,6 +1,6 @@
 # GitHubTrends
 
-Swift App that searches and shows the trendy Github repositories using the GitHub API.
+Swift app that list trending projects on Github and when tap on one of them it shows their details.
 
 ### Getting Started
 
