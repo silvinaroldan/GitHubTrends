@@ -18,37 +18,11 @@ class APIClient {
     
     static let shared = APIClient()
     
-    func searchTrendingRepositories(completion: @escaping (APIResult<[Repository]>) -> Void) {
-        
-        let errorParser = ErrorParser<[Repository]>(defaultTitle: Constants.ErrorMessage.somethingWentWrong,
-                                                    defaultMessage: Constants.ErrorMessage.search)
-        let endpoint = Endpoint.searchTrendingRepositories()
-        AlamofireNetworkService.shared.hit(endpoint, jsonParser: parseRepository, errorParser: errorParser, completion: completion)
-    }
-    
-    func getReadmeFile(repository: String, completion: @escaping (APIResult<Readme>) -> Void) {
-        
-        let errorParser = ErrorParser<Readme>(defaultTitle: Constants.ErrorMessage.somethingWentWrong,
-                                              defaultMessage: Constants.ErrorMessage.readme)
-        let endpoint = Endpoint.getReadmeFile(from: repository)
-        AlamofireNetworkService.shared.hit(endpoint, jsonParser: parseReadme, errorParser: errorParser, completion: completion)
-    }
-    
-    // MARK: - Parsers
-    
-    func parseRepository(from json: JSON) throws -> [Repository] {
-        return try parseDataArray(from: json, of: Repository.self, key: "items", using: .iso8601)
-    }
-    
-    func parseReadme(from json: JSON) throws -> Readme {
-        return try parseDataDictionary(from: json, of: Readme.self, key: "", using: .iso8601)
-    }
-    
-    func parseDataDictionary<T: Decodable>(from json: JSON, of type: T.Type, key: String, using decoder: JSONDecoder = .default) throws -> T {
+    func parseDataDictionary<T: Decodable>(from json: JSON, of type: T.Type, key: String = "", using decoder: JSONDecoder = .default) throws -> T {
         return try T.from(json: json, using: decoder)
     }
     
-    func parseDataArray<T: Decodable>(from json: JSON, of type: T.Type, key: String, using decoder: JSONDecoder = .default) throws -> [T] {
+    func parseDataArray<T: Decodable>(from json: JSON, of type: T.Type, key: String = "", using decoder: JSONDecoder = .default) throws -> [T] {
         
         guard let array = json[key].array else {
             throw Error.corruptedJSONStructure(json, key: key)

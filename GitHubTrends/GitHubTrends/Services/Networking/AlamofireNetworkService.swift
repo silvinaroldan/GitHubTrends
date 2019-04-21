@@ -45,6 +45,19 @@ class AlamofireNetworkService {
         }
     }
     
+    func responseString(_ endpoint: Endpoint, errorParser: ErrorParser<String>, completion: @escaping (APIResult<String>) -> Void) {
+        let url = URL(string: endpoint.path)!
+        let request = sessionManager.request(url)
+        request.responseString { response in
+            switch response.result {
+            case .success(let value):
+                completion(.success(value))
+            case .failure(let error):
+                completion(errorParser.parse(error))
+            }
+        }
+    }
+    
     // MARK: - Error
     
     enum Error: Swift.Error {

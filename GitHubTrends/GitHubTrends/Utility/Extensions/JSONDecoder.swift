@@ -12,7 +12,7 @@ extension JSONDecoder {
     
     static var `default`: JSONDecoder {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(.slashed)
+        decoder.dateDecodingStrategy = .formatted(.iso8601)
         return decoder
     }
     
@@ -24,7 +24,7 @@ extension JSONDecoder {
     
     static var iso8601: JSONDecoder {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(.iso8601)
+        decoder.dateDecodingStrategy = .formatted(.slashed)
         return decoder
     }
     

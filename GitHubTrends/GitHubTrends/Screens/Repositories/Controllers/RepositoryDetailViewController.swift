@@ -29,7 +29,7 @@ class RepositoryDetailViewController: UIViewController {
         starsCountLabel.text = viewModel?.starsCount
         forksCountLabel.text = viewModel?.forksCount
         
-        viewModel?.getReadmeFile {
+        viewModel?.getRawReadmeFile {
            
         }
     }

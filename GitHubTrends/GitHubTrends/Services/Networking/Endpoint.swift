@@ -43,4 +43,9 @@ extension Endpoint {
         return Endpoint(method: .get,
                         path: urlPath)
     }
+    
+    static func getRawReadmeFile(from readme: Readme) -> Endpoint {
+        return Endpoint(method: .get,
+                        path: readme.downloadURL)
+    }
 }
