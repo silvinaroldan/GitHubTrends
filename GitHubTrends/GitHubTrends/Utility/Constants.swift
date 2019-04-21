@@ -23,4 +23,8 @@ struct Constants {
         static let sessionExpired = "Your session has expired"
     }
     
+    struct RepositoryList {
+        static let title = "Github Trends"
+    }
+    
 }
