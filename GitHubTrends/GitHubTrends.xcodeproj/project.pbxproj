@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3532BC2F226CF189006E2360 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3532BC2E226CF189006E2360 /* User.swift */; };
 		35380891226BE345002F6C3D /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35380890226BE345002F6C3D /* Repositories.storyboard */; };
 		35380893226BE36C002F6C3D /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35380892226BE36C002F6C3D /* RepositoryListViewController.swift */; };
 		35380895226BE390002F6C3D /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35380894226BE390002F6C3D /* RepositoryDetailViewController.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		2A8B7917A2AEB405227E7096 /* Pods-GitHubTrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubTrends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHubTrends/Pods-GitHubTrends.debug.xcconfig"; sourceTree = "<group>"; };
 		2EC17FC2D2A1936B96C4CB86 /* Pods_GitHubTrends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubTrends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3532BC2E226CF189006E2360 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		35380890226BE345002F6C3D /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
 		35380892226BE36C002F6C3D /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
 		35380894226BE390002F6C3D /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				35719AC2226BBC6D004AC681 /* Repository.swift */,
+				3532BC2E226CF189006E2360 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				3538089F226BECB1002F6C3D /* RepositoryListCoordinator.swift in Sources */,
 				35719AB1226BA399004AC681 /* Settings.swift in Sources */,
 				35380895226BE390002F6C3D /* RepositoryDetailViewController.swift in Sources */,
+				3532BC2F226CF189006E2360 /* User.swift in Sources */,
 				353808A3226BF1CE002F6C3D /* RepositoryTableViewCell.swift in Sources */,
 				35719AB3226BA3AB004AC681 /* URLBuilder.swift in Sources */,
 				35719AC3226BBC6D004AC681 /* Repository.swift in Sources */,

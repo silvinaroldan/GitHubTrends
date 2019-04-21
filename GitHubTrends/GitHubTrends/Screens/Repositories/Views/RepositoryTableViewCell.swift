@@ -17,7 +17,7 @@ class RepositoryTableViewCell: UITableViewCell {
     var repository: Repository? {
         didSet {
             self.name.text = repository?.name
-            self.starsCount.text = "\(repository?.stars ?? 0) Stars"
+            self.starsCount.text = "\(repository?.starsCount ?? 0) Stars"
             self.repositoryDescription.text = repository?.description
         }
     }
@@ -27,4 +27,3 @@ class RepositoryTableViewCell: UITableViewCell {
     }
     
 }
-

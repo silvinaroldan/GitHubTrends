@@ -11,10 +11,12 @@ import UIKit
 class RepositoryDetailCoordinator: Coordinator {
     
     private let presenter: UINavigationController
+    private let repository: Repository
     private var repositoryDetailViewController: RepositoryDetailViewController?
     
-    init(presenter: UINavigationController) {
+    init(presenter: UINavigationController, repository: Repository) {
         self.presenter = presenter
+        self.repository = repository
     }
     
     func start() {
@@ -22,6 +24,7 @@ class RepositoryDetailCoordinator: Coordinator {
         if let repositoryDetailViewController = storyboard.instantiateViewController(withIdentifier: "RepositoryDetailViewController") as? RepositoryDetailViewController {
             
             repositoryDetailViewController.title = "Repository Detail"
+            repositoryDetailViewController.viewModel = RepositoryDetailViewModel(repository: repository)
             presenter.pushViewController(repositoryDetailViewController, animated: true)
             self.repositoryDetailViewController = repositoryDetailViewController
         }

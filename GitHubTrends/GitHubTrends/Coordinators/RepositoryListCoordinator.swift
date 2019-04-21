@@ -12,6 +12,7 @@ class RepositoryListCoordinator: Coordinator {
     
     private let presenter: UINavigationController
     private var repositoryListViewController: RepositoryListViewController?
+    private var repositoryDetailCoordinator: RepositoryDetailCoordinator?
     
     init(presenter: UINavigationController) {
         self.presenter = presenter
@@ -22,9 +23,21 @@ class RepositoryListCoordinator: Coordinator {
         if let repositoryListViewController = storyboard.instantiateViewController(withIdentifier: "RepositoryListViewController") as? RepositoryListViewController {
             
             repositoryListViewController.title = Constants.RepositoryList.title
+            repositoryListViewController.delegate = self
             
             presenter.pushViewController(repositoryListViewController, animated: true)
             self.repositoryListViewController = repositoryListViewController
         }
     }
+}
+
+extension RepositoryListCoordinator: RepositoryListViewControllerDelegate {
+    
+    func select(repository: Repository) {
+        let repositoryDetailCoordinator = RepositoryDetailCoordinator(presenter: presenter, repository: repository)
+        repositoryDetailCoordinator.start()
+        
+        self.repositoryDetailCoordinator = repositoryDetailCoordinator
+    }
+    
 }

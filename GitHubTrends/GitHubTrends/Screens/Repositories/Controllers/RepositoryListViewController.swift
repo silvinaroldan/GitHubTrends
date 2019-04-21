@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol RepositoryListViewControllerDelegate: class {
+    func select(repository: Repository)
+}
+
 class RepositoryListViewController: UIViewController {
     
+    weak var delegate: RepositoryListViewControllerDelegate?
     private var viewModel = RepositoryListViewModel()
     
     @IBOutlet var repositoryListTableView: UITableView!
@@ -39,6 +44,9 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let repository = viewModel.itemAtIndex(indexPath.row) else {
+            return
+        }
+        delegate?.select(repository: repository)
     }
 }
