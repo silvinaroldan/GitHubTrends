@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MarkdownView
 
 class RepositoryDetailViewController: UIViewController {
     
@@ -15,7 +16,10 @@ class RepositoryDetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var starsCountLabel: UILabel!
     @IBOutlet weak var forksCountLabel: UILabel!
+    @IBOutlet weak var readmeMarkdownView: MarkdownView!
+    @IBOutlet weak var readmeMarkDownViewHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var starsAndForksView: UIView!
     var viewModel: RepositoryDetailViewModel?
     
     override func viewDidLoad() {
@@ -29,8 +33,18 @@ class RepositoryDetailViewController: UIViewController {
         starsCountLabel.text = viewModel?.starsCount
         forksCountLabel.text = viewModel?.forksCount
         
+        starsAndForksView.makeBorder(color: UIColor.lightGray)
+        starsAndForksView.makeRounded(radius: 10.0)
+        
+        readmeMarkdownView.isScrollEnabled = false
+        
+        readmeMarkdownView.onRendered = { [weak self] height in
+            self?.readmeMarkDownViewHeightConstraint.constant = height - 300
+            self?.view.setNeedsLayout()
+        }
+        
         viewModel?.getRawReadmeFile {
-           
+            self.readmeMarkdownView.load(markdown: self.viewModel?.rawReadmeFile)
         }
     }
 }

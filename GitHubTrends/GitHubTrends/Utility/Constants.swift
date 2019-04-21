@@ -29,4 +29,8 @@ struct Constants {
         static let title = "Github Trends"
     }
     
+    struct Colors {
+        static let blueGrey = "gitHubBlueGrey"
+    }
+    
 }
