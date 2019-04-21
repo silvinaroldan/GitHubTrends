@@ -10,4 +10,35 @@ import UIKit
 
 class RepositoryListViewController: UIViewController {
     
+    private var viewModel = RepositoryListViewModel()
+    
+    @IBOutlet var repositoryListTableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        repositoryListTableView.estimatedRowHeight = 140
+        repositoryListTableView.rowHeight = UITableView.automaticDimension
+        
+        viewModel.loadRepositories {
+            self.repositoryListTableView.reloadData()
+        }
+    }
+}
+
+extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell", for: indexPath) as! RepositoryTableViewCell
+        cell.repository = viewModel.itemAtIndex(indexPath.row)
+    
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
