@@ -14,6 +14,8 @@ class RepositoryDetailViewModel {
     let repositoryName: String
     let repositoryFullName: String
     let ownerName: String
+    var readmeFile: Readme?
+    var errorMessage: AlertInfo?
     
     init(repository: Repository) {
         self.repositoryDescription = repository.description
@@ -24,4 +26,16 @@ class RepositoryDetailViewModel {
         self.repositoryFullName = repository.fullName
     }
     
+    func getReadmeFile(completion: @escaping () -> Void) {
+        
+        APIClient.shared.getReadmeFile(repository: self.repositoryFullName) { [weak self] result in
+            switch result {
+            case .success(let readme):
+                self?.readmeFile = readme
+            case .failure(let info):
+                self?.errorMessage = info
+            }
+            completion()
+        }
+    }
 }

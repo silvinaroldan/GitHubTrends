@@ -28,5 +28,9 @@ class RepositoryDetailViewController: UIViewController {
         descriptionLabel.text = viewModel?.repositoryDescription
         starsCountLabel.text = viewModel?.starsCount
         forksCountLabel.text = viewModel?.forksCount
+        
+        viewModel?.getReadmeFile {
+           
+        }
     }
 }

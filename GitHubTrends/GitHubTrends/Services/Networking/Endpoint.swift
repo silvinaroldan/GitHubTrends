@@ -37,4 +37,10 @@ extension Endpoint {
         return Endpoint(method: .get,
                         path: urlPath)
     }
+    
+    static func getReadmeFile(from repository: String) -> Endpoint {
+        let urlPath = String(format: Constants.API.getReadmeFile, "\(repository)")
+        return Endpoint(method: .get,
+                        path: urlPath)
+    }
 }

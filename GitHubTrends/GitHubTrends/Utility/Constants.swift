@@ -10,12 +10,14 @@ struct Constants {
     
     struct API {
         static let baseURL = Settings.shared.apiBaseURL
-         static let searchTrendingRepositories = "search/repositories?q=stars:>=200 &forks:>20&sort=stars&order=desc"
+         static let searchTrendingRepositories = "search/repositories?q=stars:>=200&forks:>20&sort=stars&order=desc"
+        static let getReadmeFile = "repos/%@/readme"
     }
     
     struct ErrorMessage {
         static let somethingWentWrong = "Something went wrong"
         static let search = "Couldn't process the search request"
+        static let readme = "Couldn't get the readme file"
     }
     
     struct ErrorParse {
