@@ -21,7 +21,7 @@ class RepositoryDetailViewModel {
     var errorMessage: AlertInfo?
     
     init(repository: Repository) {
-        self.repositoryDescription = repository.description
+        self.repositoryDescription = repository.description ?? ""
         self.starsCount = "\(repository.starsCount) Stars"
         self.forksCount = "\(repository.forksCount) Forks"
         self.repositoryName = repository.name

@@ -13,7 +13,7 @@ struct Repository: Codable {
     let fullName: String
     let starsCount: Int
     let forksCount: Int
-    let description: String
+    let description: String?
     let owner: User
 
     enum CodingKeys: String, CodingKey {

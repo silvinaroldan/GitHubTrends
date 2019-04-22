@@ -10,7 +10,8 @@ struct Constants {
     
     struct API {
         static let baseURL = Settings.shared.apiBaseURL
-        static let searchTrendingRepositories = "search/repositories?q=stars:>=200&forks:>20&sort=stars&order=desc"
+        static let getTrendingRepositories = "search/repositories?q=created:>%@&sort=stars&order=desc"
+        static let searchTrendingRepositories = "search/repositories?q=%@&created:>%@&sort=stars&order=desc"
         static let getReadmeFile = "repos/%@/readme"
     }
     

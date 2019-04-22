@@ -32,8 +32,10 @@ extension Endpoint {
 }
 
 extension Endpoint {
-    static func searchTrendingRepositories() -> Endpoint {
-        let urlPath = String(format: Constants.API.searchTrendingRepositories)
+    static func getTrendingRepositories() -> Endpoint {
+        let daysBefore = Calendar.current.date(byAdding: .day, value: -7, to: Date())
+        let stringDaysBefore = DateFormatter.reverseDashed.string(from: daysBefore!)
+        let urlPath = String(format: Constants.API.getTrendingRepositories, stringDaysBefore)
         return Endpoint(method: .get,
                         path: urlPath)
     }

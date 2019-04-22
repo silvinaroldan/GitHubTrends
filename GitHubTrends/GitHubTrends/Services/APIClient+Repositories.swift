@@ -11,11 +11,11 @@ import SwiftyJSON
 
 extension APIClient {
     
-    func searchTrendingRepositories(completion: @escaping (APIResult<[Repository]>) -> Void) {
+    func getTrendingRepositories(completion: @escaping (APIResult<[Repository]>) -> Void) {
         
         let errorParser = ErrorParser<[Repository]>(defaultTitle: Constants.ErrorMessage.somethingWentWrong,
                                                     defaultMessage: Constants.ErrorMessage.search)
-        let endpoint = Endpoint.searchTrendingRepositories()
+        let endpoint = Endpoint.getTrendingRepositories()
         AlamofireNetworkService.shared.hit(endpoint, jsonParser: parseRepository, errorParser: errorParser, completion: completion)
     }
     

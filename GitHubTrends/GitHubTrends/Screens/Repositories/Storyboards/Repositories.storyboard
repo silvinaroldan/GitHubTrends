@@ -83,13 +83,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ogd-Lb-vU8"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Rff-AC-wOC">
+                        <barButtonItem key="backBarButtonItem" title=" " id="MSq-ik-pYU"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="repositoryListTableView" destination="qMT-mK-LrX" id="c2y-Hc-4cg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmW-qL-YAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-455.07246376811599" y="65.625"/>
+            <point key="canvasLocation" x="455.07246376811599" y="65.625"/>
         </scene>
         <!--Repository Detail View Controller-->
         <scene sceneID="dC0-Zd-xdf">
@@ -294,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5Y-N3-Ag2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350.72463768115944" y="65.625"/>
+            <point key="canvasLocation" x="1260.8695652173915" y="65.625"/>
         </scene>
     </scenes>
     <resources>

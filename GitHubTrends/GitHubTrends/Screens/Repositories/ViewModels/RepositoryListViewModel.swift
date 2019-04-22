@@ -15,7 +15,7 @@ class RepositoryListViewModel {
     }
     
     func loadRepositories(completion: @escaping () -> Void) {
-        APIClient.shared.searchTrendingRepositories { [weak self] result in
+        APIClient.shared.getTrendingRepositories { [weak self] result in
             switch result {
             case .success(let repositoryList):
                 self?.items = repositoryList
