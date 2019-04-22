@@ -10,9 +10,9 @@ import UIKit
 
 class ApplicationCoordinator: Coordinator {
     
-    let window: UIWindow
-    let rootViewController: UINavigationController
-    let repositoryListCoordinator: RepositoryListCoordinator
+    private let window: UIWindow
+    private let rootViewController: UINavigationController
+    private let repositoryListCoordinator: RepositoryListCoordinator
     
     init(window: UIWindow) {
         self.window = window

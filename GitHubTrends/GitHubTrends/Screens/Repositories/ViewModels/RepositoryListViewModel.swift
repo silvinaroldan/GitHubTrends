@@ -10,12 +10,12 @@ import Foundation
 
 class RepositoryListViewModel: NSObject {
     
-    var items: [Repository] = []
-    var inSearchMode = false
+    private var items: [Repository] = []
+    private var inSearchMode = false
     var reloadTableView: (() -> Void)?
     var showAlert: (() -> Void)?
     
-    var filteredItems: [Repository] = [] {
+    private var filteredItems: [Repository] = [] {
         didSet {
             reloadTableView?()
         }
