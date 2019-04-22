@@ -14,7 +14,7 @@ struct Repository: Codable {
     let starsCount: Int
     let forksCount: Int
     let description: String
-    let owner: User?
+    let owner: User
 
     enum CodingKeys: String, CodingKey {
         case id

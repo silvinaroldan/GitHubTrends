@@ -21,7 +21,7 @@ class RepositoryDetailViewController: UIViewController {
     @IBOutlet var readmeMarkDownViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet var starsAndForksView: UIView!
-    var viewModel: RepositoryDetailViewModel?
+    var viewModel: RepositoryDetailViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,10 @@ class RepositoryDetailViewController: UIViewController {
     }
     
     func setupView() {
-        userNameLabel.text = viewModel?.ownerName
-        descriptionLabel.text = viewModel?.repositoryDescription
-        starsCountLabel.text = viewModel?.starsCount
-        forksCountLabel.text = viewModel?.forksCount
+        userNameLabel.text = viewModel.ownerName
+        descriptionLabel.text = viewModel.repositoryDescription
+        starsCountLabel.text = viewModel.starsCount
+        forksCountLabel.text = viewModel.forksCount
         
         starsAndForksView.makeBorder(color: UIColor.lightGray)
         starsAndForksView.makeRounded(radius: 10.0)
@@ -60,8 +60,10 @@ class RepositoryDetailViewController: UIViewController {
             }
         }
         
-        viewModel?.getRawReadmeFile {
+        viewModel.getRawReadmeFile {
             self.readmeMarkdownView.load(markdown: self.viewModel?.rawReadmeFile)
         }
+        
+        userAvatarImageView?.setImageWithActivityIndicator(url: URL(string: viewModel!.ownerAvatarURL)!)
     }
 }

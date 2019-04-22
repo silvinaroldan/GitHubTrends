@@ -36,6 +36,7 @@
 		35719AC1226BBBDA004AC681 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC0226BBBDA004AC681 /* Error.swift */; };
 		35719AC3226BBC6D004AC681 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC2226BBC6D004AC681 /* Repository.swift */; };
 		35EC2EF8226D2E6400CDEF8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EF7226D2E6400CDEF8F /* UIView.swift */; };
+		35EC2EFA226D3C8D00CDEF8F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */; };
 		35FDF6EA226B9A77008142BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDF6E9226B9A77008142BC /* AppDelegate.swift */; };
 		35FDF6F1226B9A78008142BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FDF6F0226B9A78008142BC /* Assets.xcassets */; };
 		35FDF6F4226B9A78008142BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FDF6F2226B9A78008142BC /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 		35719AC0226BBBDA004AC681 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		35719AC2226BBC6D004AC681 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		35EC2EF7226D2E6400CDEF8F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		35FDF6E6226B9A77008142BC /* GitHubTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FDF6E9226B9A77008142BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FDF6F0226B9A78008142BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				35719ABE226BBB99004AC681 /* Codable.swift */,
 				35719AC0226BBBDA004AC681 /* Error.swift */,
 				35EC2EF7226D2E6400CDEF8F /* UIView.swift */,
+				35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				3538089F226BECB1002F6C3D /* RepositoryListCoordinator.swift in Sources */,
 				35719AB1226BA399004AC681 /* Settings.swift in Sources */,
 				35380895226BE390002F6C3D /* RepositoryDetailViewController.swift in Sources */,
+				35EC2EFA226D3C8D00CDEF8F /* UIImageView.swift in Sources */,
 				3532BC2F226CF189006E2360 /* User.swift in Sources */,
 				353808A3226BF1CE002F6C3D /* RepositoryTableViewCell.swift in Sources */,
 				35719AB3226BA3AB004AC681 /* URLBuilder.swift in Sources */,

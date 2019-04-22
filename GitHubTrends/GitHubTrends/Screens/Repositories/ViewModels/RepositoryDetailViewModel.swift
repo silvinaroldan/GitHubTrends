@@ -14,6 +14,8 @@ class RepositoryDetailViewModel {
     let repositoryName: String
     let repositoryFullName: String
     let ownerName: String
+    let ownerAvatarURL: String
+    
     var readmeFile: Readme?
     var rawReadmeFile: String?
     var errorMessage: AlertInfo?
@@ -23,8 +25,9 @@ class RepositoryDetailViewModel {
         self.starsCount = "\(repository.starsCount) Stars"
         self.forksCount = "\(repository.forksCount) Forks"
         self.repositoryName = repository.name
-        self.ownerName = repository.owner?.name ?? ""
+        self.ownerName = repository.owner.name
         self.repositoryFullName = repository.fullName
+        self.ownerAvatarURL = repository.owner.avatarURL
     }
     
     func getReadmeFile(completion: @escaping () -> Void) {
@@ -54,4 +57,5 @@ class RepositoryDetailViewModel {
             }
         }
     }
+
 }

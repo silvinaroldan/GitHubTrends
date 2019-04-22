@@ -9,6 +9,7 @@
 import Foundation
 
 struct Settings {
+    
     static let shared = Settings()
     
     let apiBaseURL: String
