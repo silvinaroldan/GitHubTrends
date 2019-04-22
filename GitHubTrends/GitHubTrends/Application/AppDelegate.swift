@@ -21,8 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         self.applicationCoordinator = applicationCoordinator
 
+        setNavigationAppearance()
+
         applicationCoordinator.start()
 
         return true
+    }
+
+    func setNavigationAppearance() {
+        UINavigationBar.appearance().tintColor = UIColor(named: Constants.Colors.blueGrey)!
+        UINavigationBar.appearance().barTintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: Constants.Colors.blueGrey)!]
     }
 }

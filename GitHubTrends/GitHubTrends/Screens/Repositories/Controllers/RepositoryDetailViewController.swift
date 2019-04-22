@@ -29,6 +29,9 @@ class RepositoryDetailViewController: UIViewController {
     }
     
     func setupView() {
+        
+        title = viewModel.repositoryName
+        
         userNameLabel.text = viewModel.ownerName
         descriptionLabel.text = viewModel.repositoryDescription
         starsCountLabel.text = viewModel.starsCount
