@@ -17,20 +17,45 @@ class RepositoryListViewController: UIViewController {
     weak var delegate: RepositoryListViewControllerDelegate?
     private var viewModel = RepositoryListViewModel()
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
     @IBOutlet var repositoryListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        repositoryListTableView.estimatedRowHeight = 140
-        repositoryListTableView.rowHeight = UITableView.automaticDimension
-        repositoryListTableView.tableFooterView = UIView()
-        
+        setupSearchBar()
+        setupTableView()
+        loadRepositories()
+    }
+    
+    func loadRepositories() {
         showNetworkIndicator()
         viewModel.loadRepositories {
             hideNetworkIndicator()
             self.repositoryListTableView.reloadData()
         }
+    }
+    
+    func setupTableView() {
+        repositoryListTableView.estimatedRowHeight = 140
+        repositoryListTableView.rowHeight = UITableView.automaticDimension
+        repositoryListTableView.tableFooterView = UIView()
+        
+        viewModel.reloadTableViewClosure = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.repositoryListTableView.reloadData()
+            }
+        }
+    }
+    
+    func setupSearchBar() {
+        navigationItem.searchController = searchController
+ 
+        searchController.searchBar.delegate = viewModel
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        definesPresentationContext = true
     }
 }
 

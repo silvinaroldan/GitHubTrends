@@ -35,6 +35,7 @@
 		35719ABF226BBB99004AC681 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719ABE226BBB99004AC681 /* Codable.swift */; };
 		35719AC1226BBBDA004AC681 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC0226BBBDA004AC681 /* Error.swift */; };
 		35719AC3226BBC6D004AC681 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC2226BBC6D004AC681 /* Repository.swift */; };
+		357F6754226D801B00FD2D06 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357F6753226D801B00FD2D06 /* Date.swift */; };
 		35EC2EF8226D2E6400CDEF8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EF7226D2E6400CDEF8F /* UIView.swift */; };
 		35EC2EFA226D3C8D00CDEF8F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */; };
 		35EC2EFC226D5CAC00CDEF8F /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EFB226D5CAC00CDEF8F /* LoadingIndicator.swift */; };
@@ -75,6 +76,7 @@
 		35719ABE226BBB99004AC681 /* Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codable.swift; sourceTree = "<group>"; };
 		35719AC0226BBBDA004AC681 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		35719AC2226BBC6D004AC681 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		357F6753226D801B00FD2D06 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		35EC2EF7226D2E6400CDEF8F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		35EC2EFB226D5CAC00CDEF8F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				35719AC0226BBBDA004AC681 /* Error.swift */,
 				35EC2EF7226D2E6400CDEF8F /* UIView.swift */,
 				35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */,
+				357F6753226D801B00FD2D06 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				35719AAD226BA36F004AC681 /* AlamofireNetworkService.swift in Sources */,
 				35719AC1226BBBDA004AC681 /* Error.swift in Sources */,
 				35EC2EF8226D2E6400CDEF8F /* UIView.swift in Sources */,
+				357F6754226D801B00FD2D06 /* Date.swift in Sources */,
 				35719AB7226BAE33004AC681 /* AlertInfo.swift in Sources */,
 				3538089D226BEC96002F6C3D /* ApplicationCoordinator.swift in Sources */,
 				3532BC31226D01CA006E2360 /* Readme.swift in Sources */,

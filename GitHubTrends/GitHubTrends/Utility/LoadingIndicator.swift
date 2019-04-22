@@ -21,7 +21,7 @@ func showNetworkIndicator(type: SpinnerType = .statusBarAndView) {
         return
     }
    
-    KRProgressHUD.set(activityIndicatorViewColors: [UIColor.lightGray, UIColor(named: Constants.Colors.blueGrey)!])
+    KRProgressHUD.set(activityIndicatorViewColors: [UIColor(named: Constants.Colors.blueGrey)!, UIColor.lightGray])
     KRProgressHUD.set(style: .custom(background: .clear, text: .clear, icon: nil))
     KRProgressHUD.show()
 }

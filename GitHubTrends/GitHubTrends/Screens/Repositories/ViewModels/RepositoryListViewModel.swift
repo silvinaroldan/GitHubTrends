@@ -5,13 +5,28 @@
 //  Created by Silvina Roldan on 20/04/2019.
 //  Copyright © 2019 Silvina Roldan. All rights reserved.
 //
+import UIKit
+import Foundation
 
-class RepositoryListViewModel {
+class RepositoryListViewModel: NSObject {
     
     var items: [Repository] = []
+    var reloadTableViewClosure: (() -> Void)?
     var errorMessage: AlertInfo?
+    var inSearchMode = false
+    
+    var filteredItems: [Repository] = [] {
+        didSet {
+            self.reloadTableViewClosure?()
+        }
+    }
+  
     var count: Int {
-        return items.count
+        if inSearchMode {
+            return filteredItems.count
+        } else {
+            return items.count
+        }
     }
     
     func loadRepositories(completion: @escaping () -> Void) {
@@ -27,10 +42,40 @@ class RepositoryListViewModel {
     }
     
     func itemAtIndex(_ index: Int) -> Repository? {
-        if items.count > index {
-            return items[index]
+        if inSearchMode {
+            if filteredItems.count > index {
+                return filteredItems[index]
+            }
+        } else {
+            if items.count > index {
+                return items[index]
+            }
         }
         return nil
+    }
+}
+
+extension RepositoryListViewModel: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text!.isEmpty {
+            resetSearchBar(searchBar)
+        } else {
+            inSearchMode = true
+            filteredItems = items.filter({
+                $0.fullName.lowercased().contains(searchText.lowercased())
+            })
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        resetSearchBar(searchBar)
+    }
+    
+    func resetSearchBar(_ searchBar: UISearchBar) {
+        inSearchMode = false
+        searchBar.endEditing(true)
+        filteredItems = []
     }
     
 }

@@ -20,6 +20,7 @@ class Endpoint {
         self.path = path
         self.parameters = parameters
     }
+
 }
 
 extension Endpoint {
@@ -33,9 +34,7 @@ extension Endpoint {
 
 extension Endpoint {
     static func getTrendingRepositories() -> Endpoint {
-        let daysBefore = Calendar.current.date(byAdding: .day, value: -7, to: Date())
-        let stringDaysBefore = DateFormatter.reverseDashed.string(from: daysBefore!)
-        let urlPath = String(format: Constants.API.getTrendingRepositories, stringDaysBefore)
+        let urlPath = String(format: Constants.API.getTrendingRepositories, Date().addDays())
         return Endpoint(method: .get,
                         path: urlPath)
     }
