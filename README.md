@@ -1,6 +1,6 @@
 # GitHubTrends
 
-Swift app that list trending projects on Github and when tap on one of them it shows their details.
+Swift app that lists trending projects on Github and when tap on one of them it shows their details.
 
 ### Getting Started
 
@@ -37,8 +37,8 @@ Steps to get the project ready:
 
 ### Xcode Configurations
 
-I added "API_BASE_URL" and "DEBUG_ALERTS" as User defined configuration on Build seetings to manage  the defaults release and debug environments as is described [here](https://medium.freecodecamp.org/managing-different-environments-and-configurations-for-ios-projects-7970327dd9c9). Since this is a test project I didn't add another schemas.
+I added "API_BASE_URL" and "DEBUG_ALERTS" as User defined configuration on Build settings to manage  the defaults release and debug environments as is described [here](https://medium.freecodecamp.org/managing-different-environments-and-configurations-for-ios-projects-7970327dd9c9). Since this is a test project I didn't add other schemas.
 
 
 ### Note:
-From what I see, there is no GitHub API to get list of trending repositories. As is suggested [here](https://stackoverflow.com/questions/30525330/how-to-get-list-of-trending-github-repositories-by-github-api) I list the trendy repositories using the [Search Github API](https://developer.github.com/v3/search/) to get the most starred repositories.
+From what I see, there is no GitHub API to get a list of trending repositories. As is suggested [here](https://stackoverflow.com/questions/30525330/how-to-get-list-of-trending-github-repositories-by-github-api) I list the trendy repositories using the [Search Github API](https://developer.github.com/v3/search/) to get the most starred repositories.
