@@ -4,17 +4,17 @@ Swift app that lists trending projects on Github and when tap on one of them it 
 
 ### Getting Started
 
-This project makes use of cocoapods as dependency manager for third party libraries used in the project.
+This project makes use of cocoapods as a dependency manager for third party libraries used in the project.
 
-As is requested I use MVVM pattern. I also use Coordinator pattern for navigation.
+As is requested, I'm using MVVM pattern. I also use Coordinator pattern for navigation.
 
 I'm using Swift 5.x as the language for development.
 
-I use [SwiftLint](https://github.com/realm/SwiftLint) tool to enforce some style and conventions.
+I'm using [SwiftLint](https://github.com/realm/SwiftLint) tool to enforce some style and conventions.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them:
+What things you need to install the software:
 
 1) Development IDE - XCode 10.2 + 
 
@@ -37,8 +37,8 @@ Steps to get the project ready:
 
 ### Xcode Configurations
 
-I added "API_BASE_URL" and "DEBUG_ALERTS" as User defined configuration on Build settings to manage  the defaults release and debug environments as is described [here](https://medium.freecodecamp.org/managing-different-environments-and-configurations-for-ios-projects-7970327dd9c9). Since this is a test project I didn't add other schemas.
+I added an "API_BASE_URL" and a "DEBUG_ALERTS" user defined configuration on Build Settings to manage the defaults release and debug environments as is described [here](https://medium.freecodecamp.org/managing-different-environments-and-configurations-for-ios-projects-7970327dd9c9). Since this is not a production project I didn't add other schemas.
 
 
 ### Note:
-From what I see, there is no GitHub API to get a list of trending repositories. As is suggested [here](https://stackoverflow.com/questions/30525330/how-to-get-list-of-trending-github-repositories-by-github-api) I list the trendy repositories using the [Search Github API](https://developer.github.com/v3/search/) to get the most starred repositories.
+From what I see, there is no official GitHub API to get a list of trending repositories. As is suggested [here](https://stackoverflow.com/questions/30525330/how-to-get-list-of-trending-github-repositories-by-github-api) I list the trendy repositories using the [Search Github API](https://developer.github.com/v3/search/) to get the most starred repositories.
