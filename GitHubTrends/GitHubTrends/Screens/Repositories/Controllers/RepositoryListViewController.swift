@@ -27,6 +27,7 @@ class RepositoryListViewController: UIViewController {
         setupSearchBar()
         setupTableView()
         loadRepositories()
+        setupViewModel()
     }
     
     func loadRepositories() {
@@ -41,12 +42,6 @@ class RepositoryListViewController: UIViewController {
         repositoryListTableView.estimatedRowHeight = 140
         repositoryListTableView.rowHeight = UITableView.automaticDimension
         repositoryListTableView.tableFooterView = UIView()
-        
-        viewModel.reloadTableViewClosure = { [weak self] () in
-            DispatchQueue.main.async {
-                self?.repositoryListTableView.reloadData()
-            }
-        }
     }
     
     func setupSearchBar() {
@@ -56,6 +51,21 @@ class RepositoryListViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
         definesPresentationContext = true
+    }
+    
+    func setupViewModel() {
+        
+        viewModel.reloadTableView = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.repositoryListTableView.reloadData()
+            }
+        }
+        
+        viewModel.showAlert = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.showAlert(with: (self?.viewModel.errorMessage!)!)
+            }
+        }
     }
 }
 

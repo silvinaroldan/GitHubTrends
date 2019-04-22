@@ -11,13 +11,19 @@ import Foundation
 class RepositoryListViewModel: NSObject {
     
     var items: [Repository] = []
-    var reloadTableViewClosure: (() -> Void)?
-    var errorMessage: AlertInfo?
     var inSearchMode = false
+    var reloadTableView: (() -> Void)?
+    var showAlert: (() -> Void)?
     
     var filteredItems: [Repository] = [] {
         didSet {
-            self.reloadTableViewClosure?()
+            reloadTableView?()
+        }
+    }
+    
+    var errorMessage: AlertInfo? {
+        didSet {
+            showAlert?()
         }
     }
   

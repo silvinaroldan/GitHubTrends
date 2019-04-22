@@ -19,17 +19,26 @@ class RepositoryDetailViewController: UIViewController {
     @IBOutlet var forksCountLabel: UILabel!
     @IBOutlet var readmeMarkdownView: MarkdownView!
     @IBOutlet var readmeMarkDownViewHeightConstraint: NSLayoutConstraint!
-    
     @IBOutlet var starsAndForksView: UIView!
+    
     var viewModel: RepositoryDetailViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setViewModel()
         setupView()
     }
     
+    func setViewModel() {
+        viewModel.showAlert = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.showAlert(with: (self?.viewModel.errorMessage!)!)
+            }
+        }
+    }
+    
     func setupView() {
-        
         title = viewModel.repositoryName
         
         userNameLabel.text = viewModel.ownerName
@@ -71,4 +80,5 @@ class RepositoryDetailViewController: UIViewController {
         
         userAvatarImageView?.setImageWithActivityIndicator(url: URL(string: viewModel!.ownerAvatarURL)!)
     }
+    
 }

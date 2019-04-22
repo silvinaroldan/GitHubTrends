@@ -15,10 +15,15 @@ class RepositoryDetailViewModel {
     let repositoryFullName: String
     let ownerName: String
     let ownerAvatarURL: String
-    
     var readmeFile: Readme?
     var rawReadmeFile: String?
-    var errorMessage: AlertInfo?
+    var showAlert: (() -> Void)?
+    
+    var errorMessage: AlertInfo? {
+        didSet {
+            self.showAlert?()
+        }
+    }
     
     init(repository: Repository) {
         self.repositoryDescription = repository.description ?? ""
@@ -44,18 +49,20 @@ class RepositoryDetailViewModel {
     
     func getRawReadmeFile(completion: @escaping () -> Void) {
         self.getReadmeFile {
-            if let readmeFile = self.readmeFile {
-                APIClient.shared.getRawReadmeFile(from: readmeFile) { [weak self] result in
-                    switch result {
-                    case .success(let readme):
-                        self?.rawReadmeFile = readme
-                    case .failure(let info):
-                        self?.errorMessage = info
-                    }
-                    completion()
+            guard let readmeFile = self.readmeFile else {
+                completion()
+                return
+            }
+            APIClient.shared.getRawReadmeFile(from: readmeFile) { [weak self] result in
+                switch result {
+                case .success(let readme):
+                    self?.rawReadmeFile = readme
+                case .failure(let info):
+                    self?.errorMessage = info
                 }
+                completion()
             }
         }
     }
-
+    
 }
