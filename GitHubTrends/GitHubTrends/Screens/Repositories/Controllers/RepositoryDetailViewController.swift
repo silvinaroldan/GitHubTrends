@@ -63,7 +63,9 @@ class RepositoryDetailViewController: UIViewController {
             }
         }
         
+        showNetworkIndicator()
         viewModel.getRawReadmeFile {
+            hideNetworkIndicator()
             self.readmeMarkdownView.load(markdown: self.viewModel?.rawReadmeFile)
         }
         

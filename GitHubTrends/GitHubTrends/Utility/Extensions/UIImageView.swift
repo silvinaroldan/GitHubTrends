@@ -20,7 +20,7 @@ extension UIImageView {
     }
     
     func setImageWithActivityIndicator(url: URL?, defaultImage: UIImage? = nil) {
-        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.white)
+        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
         activityIndicator.center = self.center
         self.addSubview(activityIndicator)
         activityIndicator.startAnimating()

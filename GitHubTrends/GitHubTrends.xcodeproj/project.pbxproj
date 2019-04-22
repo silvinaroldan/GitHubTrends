@@ -37,6 +37,7 @@
 		35719AC3226BBC6D004AC681 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35719AC2226BBC6D004AC681 /* Repository.swift */; };
 		35EC2EF8226D2E6400CDEF8F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EF7226D2E6400CDEF8F /* UIView.swift */; };
 		35EC2EFA226D3C8D00CDEF8F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */; };
+		35EC2EFC226D5CAC00CDEF8F /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC2EFB226D5CAC00CDEF8F /* LoadingIndicator.swift */; };
 		35FDF6EA226B9A77008142BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FDF6E9226B9A77008142BC /* AppDelegate.swift */; };
 		35FDF6F1226B9A78008142BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35FDF6F0226B9A78008142BC /* Assets.xcassets */; };
 		35FDF6F4226B9A78008142BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35FDF6F2226B9A78008142BC /* LaunchScreen.storyboard */; };
@@ -76,6 +77,7 @@
 		35719AC2226BBC6D004AC681 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		35EC2EF7226D2E6400CDEF8F /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		35EC2EF9226D3C8D00CDEF8F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		35EC2EFB226D5CAC00CDEF8F /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		35FDF6E6226B9A77008142BC /* GitHubTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35FDF6E9226B9A77008142BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35FDF6F0226B9A78008142BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				35719AAE226BA38E004AC681 /* Constants.swift */,
 				35719AB0226BA399004AC681 /* Settings.swift */,
 				35719AB6226BAE33004AC681 /* AlertInfo.swift */,
+				35EC2EFB226D5CAC00CDEF8F /* LoadingIndicator.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -405,6 +408,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GitHubTrends/Pods-GitHubTrends-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -414,6 +419,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarkdownView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -441,6 +448,7 @@
 				35719AB5226BA3BC004AC681 /* Endpoint.swift in Sources */,
 				35719AAF226BA38E004AC681 /* Constants.swift in Sources */,
 				35380897226BE3AD002F6C3D /* RepositoryDetailViewModel.swift in Sources */,
+				35EC2EFC226D5CAC00CDEF8F /* LoadingIndicator.swift in Sources */,
 				35719ABB226BAF8A004AC681 /* DateFormatter.swift in Sources */,
 				353808A1226BECCF002F6C3D /* RepositoryDetailCoordinator.swift in Sources */,
 				35719ABD226BBB64004AC681 /* String.swift in Sources */,

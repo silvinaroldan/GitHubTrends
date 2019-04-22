@@ -24,8 +24,11 @@ class RepositoryListViewController: UIViewController {
         
         repositoryListTableView.estimatedRowHeight = 140
         repositoryListTableView.rowHeight = UITableView.automaticDimension
+        repositoryListTableView.tableFooterView = UIView()
         
+        showNetworkIndicator()
         viewModel.loadRepositories {
+            hideNetworkIndicator()
             self.repositoryListTableView.reloadData()
         }
     }

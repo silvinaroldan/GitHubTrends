@@ -6,4 +6,5 @@ target 'GitHubTrends' do
     pod 'SwiftyJSON', '~> 4.3'
     pod 'MarkdownView'
     pod 'AlamofireImage', '~> 3.5'
+    pod 'KRProgressHUD', '~> 3.4.0', :inhibit_warnings => true
 end
