@@ -39,7 +39,7 @@ extension RepositoryListViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell", for: indexPath) as! RepositoryTableViewCell
         cell.repository = viewModel.itemAtIndex(indexPath.row)
-    
+        
         return cell
     }
     

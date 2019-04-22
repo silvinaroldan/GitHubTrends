@@ -9,7 +9,7 @@
 import Foundation
 
 extension Error {
-    
+
     var description: String {
         if let localizedError = self as? LocalizedError {
             return localizedError.localizedDescription
@@ -17,5 +17,5 @@ extension Error {
             return "\(self)"
         }
     }
-    
+
 }

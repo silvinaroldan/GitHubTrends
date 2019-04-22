@@ -6,15 +6,15 @@
 //  Copyright © 2019 Silvina Roldan. All rights reserved.
 //
 
-import Foundation
 import Alamofire
+import Foundation
 
 class Endpoint {
-    
+
     let method: HTTPMethod
     let path: String
     let parameters: [String: Any]?
-    
+
     init(method: HTTPMethod, path: String, parameters: [String: Any]? = nil) {
         self.method = method
         self.path = path
@@ -37,13 +37,13 @@ extension Endpoint {
         return Endpoint(method: .get,
                         path: urlPath)
     }
-    
+
     static func getReadmeFile(from repository: String) -> Endpoint {
         let urlPath = String(format: Constants.API.getReadmeFile, "\(repository)")
         return Endpoint(method: .get,
                         path: urlPath)
     }
-    
+
     static func getRawReadmeFile(from readme: Readme) -> Endpoint {
         return Endpoint(method: .get,
                         path: readme.downloadURL)

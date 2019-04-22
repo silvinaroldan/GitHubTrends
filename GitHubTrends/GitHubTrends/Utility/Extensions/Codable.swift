@@ -14,14 +14,14 @@ struct DecodingError<T>: LocalizedError {
     let type: T.Type
     let json: JSON
     let error: Swift.Error
-    
+
     var errorDescription: String? {
         return "Could not convert JSON to entity of type \(self.type)\n\nError: \(self.error)\n\nJSON:\(self.json)"
     }
 }
 
 extension Decodable {
-    
+
     static func from(json: JSON, using decoder: JSONDecoder = .default) throws -> Self {
         do {
             let dictionary = json.dictionaryObject ?? [:]
@@ -31,5 +31,5 @@ extension Decodable {
             throw DecodingError(type: self, json: json, error: error)
         }
     }
-    
+
 }

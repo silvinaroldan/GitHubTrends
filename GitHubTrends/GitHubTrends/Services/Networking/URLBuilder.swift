@@ -27,7 +27,7 @@ class URLBuilder {
         guard
             let string = encodedURL.absoluteString.removingPercentEncoding,
             let decodedURL = URL(string: string)
-            else { throw Error.couldNotRemovePercentEncoding }
+        else { throw Error.couldNotRemovePercentEncoding }
         return decodedURL
     }
     

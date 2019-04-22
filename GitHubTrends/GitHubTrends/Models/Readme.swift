@@ -10,7 +10,7 @@ struct Readme: Codable {
     let url: String
     let name: String
     let downloadURL: String
-    
+
     enum CodingKeys: String, CodingKey {
         case url
         case name

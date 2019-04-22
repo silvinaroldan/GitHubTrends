@@ -13,7 +13,7 @@ class AlamofireNetworkService {
     
     static let shared = AlamofireNetworkService()
     
-    let sessionManager = Session()
+    let sessionManager = SessionManager()
     let urlBuilder = URLBuilder.default
     
     /// Hits the given `endpoint`
@@ -30,7 +30,7 @@ class AlamofireNetworkService {
     func hit<T>(_ endpoint: Endpoint, jsonParser: @escaping (JSON) throws -> T, errorParser: ErrorParser<T>, completion: @escaping (APIResult<T>) -> Void) {
         do {
             let url = try urlBuilder.url(for: endpoint)
-            let request = sessionManager.request(url, method: endpoint.method, parameters: endpoint.parameters, encoding: endpoint.parameterEncoding, headers: HTTPHeaders(makeHeaders()))
+            let request = sessionManager.request(url, method: endpoint.method, parameters: endpoint.parameters, encoding: endpoint.parameterEncoding, headers: makeHeaders())
             request.responseJSON { response in
                 do {
                     let json = try self.parseData(from: response)

@@ -6,20 +6,21 @@
 //  Copyright © 2019 Silvina Roldan. All rights reserved.
 //
 
-import UIKit
 import MarkdownView
+import SafariServices
+import UIKit
 
 class RepositoryDetailViewController: UIViewController {
     
-    @IBOutlet weak var userAvatarImageView: UIImageView!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var starsCountLabel: UILabel!
-    @IBOutlet weak var forksCountLabel: UILabel!
-    @IBOutlet weak var readmeMarkdownView: MarkdownView!
-    @IBOutlet weak var readmeMarkDownViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet var userAvatarImageView: UIImageView!
+    @IBOutlet var userNameLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var starsCountLabel: UILabel!
+    @IBOutlet var forksCountLabel: UILabel!
+    @IBOutlet var readmeMarkdownView: MarkdownView!
+    @IBOutlet var readmeMarkDownViewHeightConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var starsAndForksView: UIView!
+    @IBOutlet var starsAndForksView: UIView!
     var viewModel: RepositoryDetailViewModel?
     
     override func viewDidLoad() {
@@ -36,11 +37,27 @@ class RepositoryDetailViewController: UIViewController {
         starsAndForksView.makeBorder(color: UIColor.lightGray)
         starsAndForksView.makeRounded(radius: 10.0)
         
+        userAvatarImageView.makeRounded()
+        
         readmeMarkdownView.isScrollEnabled = false
         
         readmeMarkdownView.onRendered = { [weak self] height in
             self?.readmeMarkDownViewHeightConstraint.constant = height - 300
             self?.view.setNeedsLayout()
+        }
+        
+        readmeMarkdownView.onTouchLink = { [weak self] request in
+            guard let url = request.url else { return false }
+            
+            if url.scheme == "file" {
+                return false
+            } else if url.scheme == "https" {
+                let safari = SFSafariViewController(url: url)
+                self?.navigationController?.pushViewController(safari, animated: true)
+                return false
+            } else {
+                return false
+            }
         }
         
         viewModel?.getRawReadmeFile {

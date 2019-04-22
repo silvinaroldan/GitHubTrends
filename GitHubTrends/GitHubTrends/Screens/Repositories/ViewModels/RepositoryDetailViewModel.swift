@@ -28,7 +28,6 @@ class RepositoryDetailViewModel {
     }
     
     func getReadmeFile(completion: @escaping () -> Void) {
-        
         APIClient.shared.getReadmeFile(repository: self.repositoryFullName) { [weak self] result in
             switch result {
             case .success(let readme):
@@ -41,7 +40,7 @@ class RepositoryDetailViewModel {
     }
     
     func getRawReadmeFile(completion: @escaping () -> Void) {
-        getReadmeFile {
+        self.getReadmeFile {
             if let readmeFile = self.readmeFile {
                 APIClient.shared.getRawReadmeFile(from: readmeFile) { [weak self] result in
                     switch result {
@@ -54,6 +53,5 @@ class RepositoryDetailViewModel {
                 }
             }
         }
-        
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Silvina Roldan. All rights reserved.
 //
 
-import  Foundation
+import Foundation
 
 struct Settings {
     static let shared = Settings()
